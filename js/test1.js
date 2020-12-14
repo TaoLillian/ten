@@ -17,6 +17,28 @@
 // var Addition = require('./Addition.js');
 // console.log(Addition.AddNumber(2,3));
 
-var localTutor = require("./extentionADD.js");
-localTutor.NodeTutorial();
-localTutor.pTutor();
+// var localTutor = require("./extentionADD.js");
+// localTutor.NodeTutorial();
+// localTutor.pTutor();
+
+// var request = require("request");
+//     request("http://www.baidu.com",function (error,response,body)
+//     {
+//         console.log(body);
+//     });
+
+var express = require("express");
+// var jade = require("../jade/index.jade")
+var app = express();
+app.set('view engine','jade');
+app.get('/',function (req,res) {
+    // res.send('hello world');
+    res.render("index",{title:'index',message:'welcome'});
+});
+app.route('/Node').get(function (req,res) {
+    res.send("Turtorial Node");
+});
+app.route('/Angular').get(function (req,res) {
+    res.send("turtorial on Angular");
+});
+var server = app.listen(3000,function () {});

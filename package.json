@@ -1,0 +1,12 @@
+{
+  "name": "ten",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@tensorflow/tfjs-node": "^2.7.0",
+    "jade": "^1.11.0",
+    "request": "^2.88.2"
+  }
+}
